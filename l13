@@ -1,0 +1,11 @@
+f_input = open('1.txt', encoding='UTF-8')
+f = f_input.read()
+res = []
+for i in f:
+    if i.isdigit():
+        res.append(int(i))
+f_input.close()
+
+f_output = open('out.txt', 'w')
+f_output.write(str(sum(res)))
+f_output.close()
